@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: my-cool-deployment
+spec: 
+  selector: 
+    matchLabels:
+      app: my-cool-deployment
+  template:
+    metadata:
+      labels:
+        app: my-cool-deployment
+    spec:
+      containers:
+        - name: web
+          image: kiamol/ch02-hello-kiamol
